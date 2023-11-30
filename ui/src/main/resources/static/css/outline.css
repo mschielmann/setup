@@ -1,0 +1,13 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-weight: bold;
+    font-size: xx-large;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    padding-block-start: 30px;
+    padding-block-end: 30px;
+    background-color: #f6f6f6;
+}

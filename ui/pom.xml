@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>pl.mschielmann</groupId>
+        <artifactId>setup-project-spring-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../spring-parent/pom.xml</relativePath>
+    </parent>
+    <artifactId>setup-project-ui</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Setup Project UI</name>
+
+    <properties>
+        <htmlunit.version>2.70.0</htmlunit.version>
+        <selenium-htmlunit.version>4.13.0</selenium-htmlunit.version>
+    </properties>
+
+    <dependencies>
+        <!-- SpringBoot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>${spring.boot.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.yaml</groupId>
+                    <artifactId>snakeyaml</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+
+        <!-- Project dependencies -->
+        <dependency>
+            <groupId>pl.mschielmann</groupId>
+            <artifactId>setup-project-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!-- TEST -->
+        <dependency>
+            <groupId>net.sourceforge.htmlunit</groupId>
+            <artifactId>htmlunit</artifactId>
+            <version>${htmlunit.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>htmlunit-driver</artifactId>
+            <version>${selenium-htmlunit.version}</version>
+        </dependency>
+
+    </dependencies>
+</project>
